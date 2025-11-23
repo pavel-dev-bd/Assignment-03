@@ -15,7 +15,24 @@ document.addEventListener('DOMContentLoaded', () => {
       icon.classList.toggle('fa-bars');
       icon.classList.toggle('fa-xmark');
     });
-
+  const swiper = new Swiper('.swiper', {
+      // Optional parameters
+        autoplay:false,
+        loop: true,
+        // autoplay: {
+        // delay: 5000,
+        // disableOnInteraction: false,
+        // },
+        navigation:{
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+        // If we need pagination
+        pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        },
+    });
     // Hero Slider
     // const slides = document.querySelectorAll('.slide');
     // const dots = document.querySelectorAll('.dot');
@@ -35,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // }, 5000);
 
     // Current Year
-    document.getElementById('year').textContent = new Date().getFullYear();
+    //document.getElementById('year').textContent = new Date().getFullYear();
 
   
 
@@ -68,24 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })();
 
-    const swiper = new Swiper('.swiper', {
-      // Optional parameters
-        autoplay:false,
-        loop: true,
-        // autoplay: {
-        // delay: 5000,
-        // disableOnInteraction: false,
-        // },
-        navigation:{
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-        },
-        // If we need pagination
-        pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        },
-    });
+  
 
 
 });
